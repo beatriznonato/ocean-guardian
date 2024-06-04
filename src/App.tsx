@@ -1,9 +1,10 @@
 import "./App.css";
+import WelcomeSlider from "./components/WelcomeSlider/WelcomeSlider";
 
 function App() {
   return (
     <>
-      <p>Hello World!</p>
+      <WelcomeSlider />
     </>
   );
 }

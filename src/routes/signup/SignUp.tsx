@@ -66,7 +66,13 @@ export const SignUp = () => {
 
       <h1>Faça sua conta!</h1>
       <div className="signup-form-wrapper">
-        <Form inputFields={input} method="POST" btnVariant="white" btnText="Cadastrar" cols={2} />
+        <Form
+          inputFields={input}
+          method="POST"
+          btnVariant="white"
+          btnText="Cadastrar"
+          cols={2}
+        />
       </div>
 
       <p className="signup-login-user">

@@ -20,34 +20,34 @@ export const Navigation = ({ tab }: SidebarProps) => {
   return (
     <div className="navigation-menu-container">
       <div className="navigation-main-menu">
-        <IconButton 
-          icon={Home} 
+        <IconButton
+          icon={Home}
           isActive={tab === "home"}
-          onClick={() => navigate("/dashboard")} 
+          onClick={() => navigate("/dashboard")}
         />
-        <IconButton 
-          icon={Turtle} 
+        <IconButton
+          icon={Turtle}
           isActive={tab === "animal"}
-          onClick={() => navigate("/monitoramento-animais")} 
+          onClick={() => navigate("/monitoramento-animais")}
         />
-        <IconButton 
-          icon={Rubish} 
-          isActive={tab === "polution"} 
+        <IconButton
+          icon={Rubish}
+          isActive={tab === "polution"}
           onClick={() => navigate("/monitoramento-poluicao")}
         />
-        <IconButton 
-          icon={Coral} 
+        <IconButton
+          icon={Coral}
           isActive={tab === "vegetation"}
-          onClick={() => navigate("/monitoramento-vegetacao")} 
+          onClick={() => navigate("/monitoramento-vegetacao")}
         />
-        <IconButton 
-          icon={Chat} 
-          isActive={tab === "signal"} 
+        <IconButton
+          icon={Chat}
+          isActive={tab === "signal"}
           onClick={() => navigate("/sinais")}
         />
       </div>
 
-      <button 
+      <button
         className="navigation-settings"
         onClick={() => navigate("/configuracoes")}
       >

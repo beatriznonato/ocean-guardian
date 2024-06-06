@@ -17,12 +17,24 @@
   color: var(--color--white);
 }
 
+.button-blue:active {
+  background-color: var(--color--tertiary-blue-active);
+}
+
 .button-white {
   background-color: var(--color--white);
   color: var(--color--primary-blue);
 }
 
+.button-white:active {
+  background-color: var(--color--white-active);
+}
+
 .button-outline {
   border: 2px solid var(--color--white);
   color: var(--color--white);
+}
+
+.button-white:active {
+  background-color: var(--color--white-active);
 }

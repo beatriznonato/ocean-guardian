@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,800&family=Yeseva+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,800;1,800&family=Yeseva+One&display=swap");
 
 :root {
   --color--primary-blue: #092147;
   --color--secondary-blue: #03336f;
-  --color--tertiary-blue: #005ADE;
+  --color--tertiary-blue: #005ade;
   --color--white: #fff;
   --color--black: #000;
   --color--white-gradient: linear-gradient(
@@ -12,8 +12,13 @@
     rgba(255, 255, 255, 0.08)
   );
 
+  --color--primary-blue-active: #092147c8;
+  --color--secondary-blue-active: #03336fc8;
+  --color--tertiary-blue-active: #005adec8;
+  --color--white-active: #ffffffc8;
+
   --font-family--text: "Raleway";
-  --font-family--heading: "Yeseva One",;
+  --font-family--heading: "Yeseva One";
 
   --font-size--text: 18px;
   --font-size--heading: 38px;
@@ -23,11 +28,20 @@
 
 * {
   box-sizing: border-box;
+  -webkit-overflow-scrolling: auto !important;
 }
 
 body {
   margin: 0;
   padding: 0;
+  overscroll-behavior: none;
+  background-color: var(--color--primary-blue);
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
 }
 
 p {
@@ -36,6 +50,11 @@ p {
   font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-family--heading);
 }

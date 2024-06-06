@@ -7,20 +7,21 @@ type ButtonProps = {
   type?: "button" | "reset" | "submit" | undefined;
   style?: CSSProperties;
   onClick?: () => void;
+  className?: string;
 };
 
-const Button = ({ text, variant, type, style, onClick }: ButtonProps) => {
+const Button = ({ text, variant, type, style, onClick,  className }: ButtonProps) => {
   const variantType =
     variant == "white"
       ? "button-white"
       : variant == "blue"
       ? "button-blue"
-      : "ouline";
+      : "button-outline";
 
   return (
     <button
       type={type}
-      className={`button ${variantType}`}
+      className={`button ${variantType} ${className}`}
       style={style}
       onClick={onClick}
     >

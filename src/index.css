@@ -36,6 +36,7 @@ body {
   padding: 0;
   overscroll-behavior: none;
   background-color: var(--color--primary-blue);
+  color: var(--color--white);
 }
 
 html,

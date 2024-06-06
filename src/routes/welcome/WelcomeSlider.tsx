@@ -1,10 +1,12 @@
-import WelcomeSlide, { WelcomeSlideProps } from "../WelcomeSlide/WelcomeSlide";
+import WelcomeSlide, {
+  WelcomeSlideProps,
+} from "../../components/WelcomeSlide/WelcomeSlide";
 import SlideOne from "../../assets/images/welcome-screen-one.png";
 import SlideTwo from "../../assets/images/welcome-screen-two.png";
 import SlideThree from "../../assets/images/welcome-screen-three.png";
 import SlideFour from "../../assets/images/welcome-screen-four.png";
 import "./WelcomeSlider.css";
-import Button from "../Button/Button";
+import Button from "../../components/Button/Button";
 import { useEffect, useRef, useState } from "react";
 import { useScroll } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -50,7 +52,7 @@ const WelcomeSlider = () => {
       return scrollTo(slideThreeRef);
     } else if (currentScrollX > 0.5 && currentScrollX < 0.75) {
       return scrollTo(slideFourRef);
-    } else return navigate("/Dashboard/Dashboard");
+    } else return navigate("/login");
   };
 
   const slides: WelcomeSlideProps[] = [

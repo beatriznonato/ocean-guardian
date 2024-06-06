@@ -1,0 +1,39 @@
+.signal-overlay-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 100px);
+  height: 100%;
+  background-color: var(--color--primary-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signal-overlay-content p {
+  font-size: var(--font-size--signal-overlay);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.signal-overlay-btn {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: #ffffff00;
+  font-family: var(--font-family--text);
+  font-size: var(--font-size--sub-heading);
+  color: var(--color--white);
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  font-weight: 700;
+  position: absolute;
+  top: 70px;
+  left: 60px;
+}
+
+.signal-overlay-btn svg {
+  rotate: 180deg;
+}

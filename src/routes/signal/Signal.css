@@ -1,0 +1,86 @@
+.signal-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  width: 100%;
+  height: 100dvh;
+}
+
+.signal-content {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.signal-heading-container {
+  position: fixed;
+  width: 100%;
+  padding: 70px 60px 30px;
+}
+
+.signal-content h1 {
+  margin: 0;
+}
+
+.signal-scroll-area {
+  margin-top: 140px;
+  padding: 0 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 110px;
+  height: calc(100dvh - 140px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding-bottom: 70px;
+}
+
+.signal-scroll-area::-webkit-scrollbar {
+  display: none;
+}
+
+.signal-subheading {
+  font-family: var(--font-family--text);
+  font-size: var(--font-size--sub-heading);
+}
+
+.signal-shortcut {
+  width: 100%;
+  height: 129px;
+  display: flex;
+  gap: 40px;
+}
+
+.signal-sentences {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.signal-shortcut-btn,
+.signal-sentence-btn {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.101);
+  background-color: #03336f;
+  box-shadow: 0px 0px 32.3px 0px rgba(0, 0, 0, 0);
+  font-family: var(--font-family--text);
+  font-size: var(--font-size--button);
+  color: var(--color--white);
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.signal-shortcut-btn:active,
+.signal-sentence-btn:active {
+    background-color: #03346fb7;
+}
+
+.signal-sentence-btn {
+  padding: 33px 28px;
+  text-transform: none;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: var(--font-family--text);
+}

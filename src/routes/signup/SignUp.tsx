@@ -60,6 +60,7 @@ export const SignUp = () => {
           method="POST"
           btnVariant="white"
           btnText="Cadastrar"
+          onClick={() => navigate("/login")}
           cols={2}
         />
       </div>

@@ -32,6 +32,7 @@ export const Login = () => {
           method="POST"
           btnVariant="white"
           btnText="Entrar"
+          onClick={() => navigate("/dashboard")}
           cols={1}
         />
         <p className="login-add-user">

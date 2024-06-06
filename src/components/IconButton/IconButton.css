@@ -1,0 +1,16 @@
+.icon-button-container {
+  width: 65px;
+  height: 65px;
+  appearance: none;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 21px;
+}
+
+.icon-button-container > svg {
+  width: 28px;
+}

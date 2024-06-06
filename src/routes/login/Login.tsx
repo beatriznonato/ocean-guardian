@@ -38,7 +38,7 @@ export const Login = () => {
           />
         </svg>
         <h1>Bem vindo de volta ao OceanGuardian!</h1>
-        <Form inputFields={input} method="POST" btnVariant="white" cols={1} />
+        <Form inputFields={input} method="POST" btnVariant="white" btnText="Entrar" cols={1} />
         <p className="login-add-user">
           Não tem uma conta?{" "}
           <span onClick={() => navigate("/sign-up")}>Faça seu cadastro</span>

@@ -11,11 +11,13 @@ export type InputField = {
 type FormProps = {
   inputFields: InputField[];
   btnVariant: "white" | "blue" | "outline";
+  btnText?: string;
+  btnClassName?: string;
   method: string;
   cols?: 1 | 2;
 };
 
-const Form = ({ inputFields, btnVariant, method, cols = 1 }: FormProps) => {
+const Form = ({ inputFields, btnVariant, btnText="Enviar", btnClassName, method, cols = 1 }: FormProps) => {
   return (
     <div className="form-container">
       <form method={method} action="/submit-form">
@@ -35,7 +37,7 @@ const Form = ({ inputFields, btnVariant, method, cols = 1 }: FormProps) => {
             />
           ))}
         </div>
-        <Button text="Entrar" type="submit" variant={btnVariant} />
+        <Button text={btnText} type="submit" variant={btnVariant} className={btnClassName}/>
       </form>
     </div>
   );

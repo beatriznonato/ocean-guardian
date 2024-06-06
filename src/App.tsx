@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   { path: "/monitoramento-poluicao", element: <PolutionMonitoring /> },
   { path: "/monitoramento-vegetacao", element: <VegetationMonitoring /> },
   { path: "/sinais", element: <Signal /> },
-  { path: "/configuracoes", element: <Settings /> }
+  { path: "/configuracoes", element: <Settings /> },
 ]);
 
 function App() {

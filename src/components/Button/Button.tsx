@@ -10,7 +10,14 @@ type ButtonProps = {
   className?: string;
 };
 
-const Button = ({ text, variant, type, style, onClick,  className }: ButtonProps) => {
+const Button = ({
+  text,
+  variant,
+  type,
+  style,
+  onClick,
+  className,
+}: ButtonProps) => {
   const variantType =
     variant == "white"
       ? "button-white"

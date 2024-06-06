@@ -42,7 +42,7 @@ const WelcomeSlider = () => {
       unsubscribeX();
     };
   }, [scrollXProgress]);
-  
+
   console.log(currentScrollX);
   const navigate = useNavigate();
 
@@ -99,7 +99,7 @@ const WelcomeSlider = () => {
 
       <div className="welcome-slider-btn-nav">
         <div className="navigation-container">
-          <div 
+          <div
             onClick={() => scrollTo(slideOneRef)}
             className="navigation-circle"
             style={{
@@ -107,7 +107,7 @@ const WelcomeSlider = () => {
                 currentScrollX < 0.25 ? "var(--color--white)" : "#97b2df",
             }}
           ></div>
-          <div 
+          <div
             onClick={() => scrollTo(slideTwoRef)}
             className="navigation-circle"
             style={{

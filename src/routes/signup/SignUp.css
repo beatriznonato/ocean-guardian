@@ -1,0 +1,39 @@
+.signup-container {
+  width: 100%;
+  height: 100dvh;
+  background-color: var(--color--tertiary-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-image {
+  position: absolute;
+  width: 300px;
+}
+
+.signup-image.corner-one {
+  top: 0;
+  left: 0;
+}
+
+.signup-image.corner-two {
+  bottom: 0;
+  right: 0;
+  rotate: 180deg;
+}
+
+.signup-form-wrapper {
+  width: 85%;
+  position: relative;
+  z-index: 1;
+}
+
+.signup-login-user {
+  margin-top: 62px;
+}
+
+.signup-login-user span {
+  font-weight: 700;
+}

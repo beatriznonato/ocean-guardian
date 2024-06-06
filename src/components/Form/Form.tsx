@@ -13,6 +13,7 @@ type FormProps = {
   btnVariant: "white" | "blue" | "outline";
   btnText?: string;
   btnClassName?: string;
+  onClick: () => void;
   method: string;
   cols?: 1 | 2;
 };
@@ -21,6 +22,7 @@ const Form = ({
   inputFields,
   btnVariant,
   btnText = "Enviar",
+  onClick,
   btnClassName,
   method,
   cols = 1,
@@ -49,6 +51,7 @@ const Form = ({
           type="submit"
           variant={btnVariant}
           className={btnClassName}
+          onClick={onClick}
         />
       </form>
     </div>

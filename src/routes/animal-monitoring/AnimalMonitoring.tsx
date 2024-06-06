@@ -55,6 +55,7 @@ export const AnimalMonitoring = () => {
           inputFields={input}
           btnVariant={"blue"}
           btnClassName="animal-monitoring-form-btn"
+          onClick={() => undefined}
           method={"post"}
         />
         <Button

@@ -13,7 +13,9 @@ type FormProps = {
   btnVariant: "white" | "blue" | "outline";
   btnText?: string;
   btnClassName?: string;
-  onClick: () => void;
+  onClick?: () => void;
+  onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => Promise<void>);
+  onSubmit?: React.FormEventHandler<HTMLFormElement>;
   method: string;
   cols?: 1 | 2;
 };
@@ -23,13 +25,15 @@ const Form = ({
   btnVariant,
   btnText = "Enviar",
   onClick,
+  onChange,
+  onSubmit,
   btnClassName,
   method,
   cols = 1,
 }: FormProps) => {
   return (
     <div className="form-container">
-      <form method={method} action="/submit-form">
+      <form method={method} action="/submit-form" onSubmit={onSubmit}>
         <div
           className="fields-container"
           style={{
@@ -43,6 +47,7 @@ const Form = ({
               name={field.name}
               placeholder={field.placeholder}
               required={field.required}
+              onChange={onChange}
             />
           ))}
         </div>

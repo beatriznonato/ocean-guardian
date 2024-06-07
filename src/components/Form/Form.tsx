@@ -1,4 +1,5 @@
 import Button from "../Button/Button";
+import Loader from "../Loader/Loader";
 import "./Form.css";
 
 export type InputField = {
@@ -19,6 +20,7 @@ type FormProps = {
   onSubmit?: React.FormEventHandler<HTMLFormElement>;
   method: string;
   cols?: 1 | 2;
+  isLoading?: boolean;
 };
 
 const Form = ({
@@ -30,6 +32,7 @@ const Form = ({
   btnClassName,
   method,
   cols = 1,
+  isLoading = false,
 }: FormProps) => {
   return (
     <div className="form-container">
@@ -54,13 +57,19 @@ const Form = ({
             </div>
           ))}
         </div>
-        <Button
-          text={btnText}
-          type="submit"
-          variant={btnVariant}
-          className={btnClassName}
-          onClick={onClick}
-        />
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <Button
+            text={btnText}
+            type="submit"
+            variant={btnVariant}
+            className={btnClassName}
+            onClick={onClick}
+          />
+        )}
+
+<Loader />
       </form>
     </div>
   );

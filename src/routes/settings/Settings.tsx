@@ -1,6 +1,10 @@
 import "./Settings.css";
+import { auth } from "../../firebase/FirebaseConfig";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
 import Navigation from "../../components/Navigation/Navigation";
 import Button from "../../components/Button/Button";
+import { FirebaseError } from "firebase/app";
 
 const accountLabel = [
   "Nome",
@@ -18,6 +22,22 @@ const accountData = [
 ];
 
 export const Settings = () => {
+  const navigate = useNavigate();
+
+  const logout = async () => {
+    try {
+      await signOut(auth);
+      navigate("/login");
+      console.log("User has been logged out");
+    } catch (error: unknown) {
+      if (error instanceof FirebaseError) {
+        console.log(error.message);
+      } else {
+        console.log("An error occurred");
+      }
+    }
+  };
+
   return (
     <div className="settings-container">
       <Navigation tab={undefined} />
@@ -37,7 +57,12 @@ export const Settings = () => {
           </div>
         </div>
 
-        <Button className="settings-logout-btn" text="Sair" variant="outline" />
+        <Button
+          className="settings-logout-btn"
+          text="Sair"
+          variant="outline"
+          onClick={logout}
+        />
       </div>
     </div>
   );

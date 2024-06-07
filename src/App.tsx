@@ -9,6 +9,7 @@ import PolutionMonitoring from "./routes/polution-monitoring/PolutionMonitoring"
 import VegetationMonitoring from "./routes/vegetation-monitoring/VegetationMonitoring";
 import Signal from "./routes/signal/Signal";
 import Settings from "./routes/settings/Settings";
+import { AuthProvider } from "./firebase/AuthProvider";
 
 const router = createBrowserRouter([
   { path: "/", element: <WelcomeSlider /> },
@@ -23,7 +24,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  );
 }
 
 export default App;

@@ -30,10 +30,25 @@
   z-index: 1;
 }
 
+.signup-form-wrapper button {
+  margin-top: 50px;
+}
+
 .signup-login-user {
   margin-top: 62px;
 }
 
 .signup-login-user span {
   font-weight: 700;
+  cursor: pointer;
+}
+
+.signup-error-message {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--font-size--error);
+  color: var(--color--error);
+  font-weight: 600;
 }

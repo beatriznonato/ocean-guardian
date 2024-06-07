@@ -6,6 +6,8 @@ export type InputField = {
   type: React.HTMLInputTypeAttribute;
   placeholder: string;
   required: boolean;
+  onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => Promise<void>);
+  error?: string;
 };
 
 type FormProps = {
@@ -14,7 +16,6 @@ type FormProps = {
   btnText?: string;
   btnClassName?: string;
   onClick?: () => void;
-  onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => Promise<void>);
   onSubmit?: React.FormEventHandler<HTMLFormElement>;
   method: string;
   cols?: 1 | 2;
@@ -25,7 +26,6 @@ const Form = ({
   btnVariant,
   btnText = "Enviar",
   onClick,
-  onChange,
   onSubmit,
   btnClassName,
   method,
@@ -41,14 +41,17 @@ const Form = ({
           }}
         >
           {inputFields.map((field, index) => (
-            <input
-              key={index}
-              type={field.type}
-              name={field.name}
-              placeholder={field.placeholder}
-              required={field.required}
-              onChange={onChange}
-            />
+            <div className="form-input-block" key={index}>
+              <input
+                type={field.type}
+                name={field.name}
+                placeholder={field.placeholder}
+                onChange={field.onChange}
+              />
+              {field.required === true && field.error !== "" && (
+                <span className="error-message">{field.error}</span>
+              )}
+            </div>
           ))}
         </div>
         <Button

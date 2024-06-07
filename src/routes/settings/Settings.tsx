@@ -5,6 +5,22 @@ import { useNavigate } from "react-router-dom";
 import Navigation from "../../components/Navigation/Navigation";
 import Button from "../../components/Button/Button";
 import { FirebaseError } from "firebase/app";
+import { useEffect, useState } from "react";
+import { db } from "../../firebase/FirebaseConfig";
+import { doc, getDoc } from "firebase/firestore";
+
+// interface User {
+//   id: string;
+//   [key: string]: unknown;
+// }
+
+interface User {
+  id: string;
+  name: string;
+  surname: string;
+  org_name: string;
+  email: string;
+}
 
 const accountLabel = [
   "Nome",
@@ -23,6 +39,36 @@ const accountData = [
 
 export const Settings = () => {
   const navigate = useNavigate();
+  const [user, setUser] = useState<User>();
+  const userId = "mzKWey82UyAnIYfwA9Qz";
+
+  // const usersCollectionRef = collection(db, "users");
+  // useEffect(() => {
+  //   const getUsers = async () => {
+  //     const data = await getDocs(usersCollectionRef);
+  //     setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+  //   };
+
+  //   getUsers();
+  // }, []);
+
+  useEffect(() => {
+    const getUser = async () => {
+      try {
+        const userDoc = doc(db, "users", userId);
+        const userData = await getDoc(userDoc);
+        if (userData.exists()) {
+          setUser({ id: userData.id, ...userData.data() } as User);
+        } else {
+          console.log("No such document!");
+        }
+      } catch (error) {
+        console.error("Error fetching user: ", error);
+      }
+    };
+
+    getUser();
+  }, [userId]);
 
   const logout = async () => {
     try {
@@ -51,9 +97,14 @@ export const Settings = () => {
             ))}
           </div>
           <div className="account-data">
-            {accountData.map((text, idx) => (
+            {/* {accountData.map((text, idx) => (
               <p key={idx}>{text}</p>
-            ))}
+            ))} */}
+            <p>{user ? user.name : ""}</p>
+            <p>{user ? user.surname : ""}</p>
+            <p>{user ? user.org_name : ""}</p>
+            <p>{user ? user.email : ""}</p>
+            <p>---</p>
           </div>
         </div>
 

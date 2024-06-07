@@ -11,6 +11,7 @@
     rgba(13deg, 255, 255, 255, 0.16),
     rgba(255, 255, 255, 0.08)
   );
+  --color--error: #FFFF00;
 
   --color--primary-blue-active: #092147c8;
   --color--secondary-blue-active: #03336fc8;
@@ -25,6 +26,7 @@
   --font-size--sub-heading: 20px;
   --font-size--button: 14px;
   --font-size--signal-overlay: 63px;
+  --font-size--error: 15px;
 }
 
 * {
@@ -46,7 +48,8 @@ body {
   overflow: hidden;
 }
 
-p {
+p,
+span {
   font-family: var(--font-family--text);
   color: var(--color--white);
   font-weight: 400;

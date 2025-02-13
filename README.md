@@ -2,7 +2,11 @@
 
 ## Challenge Description
 
-Developing a mobile application or web system as a solution for monitoring the marine environment, contributing to the protection of life in the oceans.
+This project is a web application developed as a Progressive Web App (PWA), with the aim of monitoring the marine environment, contributing to the protection of life in the oceans. Through the platform, users can register information about marine pollution, marine vegetation, and marine animals, assisting in the collection and analysis of data for conservation actions.
+
+The application offers several features, including registration and login screens, as well as an interactive dashboard to facilitate access to different functionalities. The platform also includes a signaling screen useful for divers to communicate underwater.
+
+The collected information is securely stored using Firebase, ensuring data integrity and easy retrieval. User account security is guaranteed with password encryption on the registration screen.
 
 ## Features ✨
 Features already available in the software:

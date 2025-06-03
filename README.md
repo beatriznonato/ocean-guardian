@@ -88,7 +88,7 @@ To install a Progressive Web App (PWA) on your mobile device:
 
 ## Design and Prototyping 🎨
 
-Figma was chosen as the central tool in the challenge due to its real-time collaboration capabilities and intuitive interface for agile design and prototyping. For the application experience, please access the prototype [link](https://www.figma.com/design/QtBAQndvvI1mSl9y9PSANg/OceanGuardian?m=dev&node-id=58-605&t=z1ibDg7EFksKTGOB-1) , and to view the app's creation, visit the [mockup](https://www.figma.com/design/QtBAQndvvI1mSl9y9PSANg/OceanGuardian?m=dev&node-id=58-605&t=z1ibDg7EFksKTGOB-1).
+Figma was chosen as the central tool in the challenge due to its real-time collaboration capabilities and intuitive interface for agile design and prototyping. For the application experience, please visit the prototype [link](https://www.figma.com/design/QtBAQndvvI1mSl9y9PSANg/OceanGuardian?m=dev&node-id=58-605&t=z1ibDg7EFksKTGOB-1).
 
 ## Agile Methodology ⚡️
 
